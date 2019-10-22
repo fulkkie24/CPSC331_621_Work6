@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<title>PYRAMID</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+  height: 100%;
+  color: #777;
+  line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: url('jpg/10.png');
+  min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+  background-image: url("jpg./8.jpg");
+  min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+  background-image: url("/w3images/parallax3.jpg");
+  min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="index.htm" class="w3-bar-item w3-button " >HOME</a>
+    <a href="pyramid.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> Pyramid Link</a>
+    <a href="http://fulkkie1742.epizy.com/?i=1" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> HomePage 1</a>
+	<a href="http://fulkkie24.freehost.in.th/" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> HomePage 2</a>
+	<a href="https://github.com/fulkkie24/CPSC331_621_Work04/blob/master/northwind_fulkkie23.sql" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> File SQL </a>
+	<a href="https://github.com/fulkkie24/CPSC331_621_Work04/tree/master/S0-S7%20NorthWind%20Code?fbclid=IwAR0WoyZWN1N_gUNtyXNrP-1prTy6llLCfBt-aiV3sdYnsyC5fHNtVzu3VrY" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> 4-46 Code</a>
+	<a href="https://github.com/fulkkie24/CPSC331_621_Midterm-project-/blob/master/%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%87%E0%B8%B2%E0%B8%99%20Midterm%20project%20.pdf?fbclid=IwAR0yop0UQ87SQKFlBRfeV0S9xqL6Y6sSns6F6g-nw9At8UqImHoArvsT3m0" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> Midterm project</a>
+	
+     
+    </a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="index.htm" class="w3-bar-item w3-button" onclick="toggleFunction()">HOME</a>
+    <a href="pyramid.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Pyramid</a>
+    <a href="http://fulkkie1742.epizy.com/?i=1" class="w3-bar-item w3-button" onclick="toggleFunction()">HomePage 1</a>
+  <a href="http://fulkkie24.freehost.in.th/" class="w3-bar-item w3-button" onclick="toggleFunction()">HomePage 2</a>
+  <a href="https://github.com/fulkkie24/CPSC331_621_Work04/blob/master/northwind_fulkkie23.sql" class="w3-bar-item w3-button" onclick="toggleFunction()">File SQL </a>
+  <a href="https://github.com/fulkkie24/CPSC331_621_Work04/tree/master/S0-S7%20NorthWind%20Code?fbclid=IwAR0WoyZWN1N_gUNtyXNrP-1prTy6llLCfBt-aiV3sdYnsyC5fHNtVzu3VrY" class="w3-bar-item w3-button" onclick="toggleFunction()">4-46 Code</a>
+  <a href="https://github.com/fulkkie24/CPSC331_621_Midterm-project-/blob/master/%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%87%E0%B8%B2%E0%B8%99%20Midterm%20project%20.pdf?fbclid=IwAR0yop0UQ87SQKFlBRfeV0S9xqL6Y6sSns6F6g-nw9At8UqImHoArvsT3m0" class="w3-bar-item w3-button" onclick="toggleFunction()">Midterm project</a>
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">MY <span class="w3-hide-small">WEBSITE</span> HOMEWORK</span>
+  </div>
+</div>
+<center>
+<div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>PY</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>RAMID</b></h1>
+	<a href="https://github.com/fulkkie24/CPSC331_621_php_pyramid-/blob/master/PHP/Fluke1.php"><button class="button button4">Pyramid 1</a></button>
+	<a href="https://github.com/fulkkie24/CPSC331_621_php_pyramid-/blob/master/PHP/Fluke2.php"><button class="button button4">Pyramid 2</a></button>
+	<a href="https://github.com/fulkkie24/CPSC331_621_php_pyramid-/blob/master/PHP/Fluke3.php"><button class="button button4">Pyramid 3</a></button>
+	<a href="https://github.com/fulkkie24/CPSC331_621_php_pyramid-/blob/master/PHP/Fluke4.php"><button class="button button4">Pyramid 4</a></button>
+	<a href="https://github.com/fulkkie24/CPSC331_621_php_pyramid-/blob/master/PHP/Fluke5.php"><button class="button button4">Pyramid 5</a></button></br>
+	<a href="https://github.com/fulkkie24/CPSC331_621_php_pyramid-/blob/master/PHP/Fluke6.php"><button class="button button4">Pyramid 6</a></button>
+	<a href="https://github.com/fulkkie24/CPSC331_621_php_pyramid-/blob/master/PHP/Fluke7.php"><button class="button button4">Pyramid 7</a></button>
+	<a href="https://github.com/fulkkie24/CPSC331_621_php_pyramid-/blob/master/PHP/Fluke8.php"><button class="button button4">Pyramid 8</a></button>
+	<a href="https://github.com/fulkkie24/CPSC331_621_php_pyramid-/blob/master/PHP/Fluke9.php"><button class="button button4">Pyramid 9</a></button>
+	<a href="https://github.com/fulkkie24/CPSC331_621_php_pyramid-/blob/master/PHP/Fluke10.php"><button class="button button4">Pyramid 10</a></button></br>
+	<a href="https://github.com/fulkkie24/CPSC331_621_php_pyramid-/blob/master/PHP/Fluke11.php"><button class="button button4">Pyramid 11</a></button>
+	<a href="https://github.com/fulkkie24/CPSC331_621_php_pyramid-/blob/master/PHP/Fluke12.php"><button class="button button4">Pyramid 12</a></button>
+	<a href="https://github.com/fulkkie24/CPSC331_621_php_pyramid-/blob/master/PHP/Fluke13.php"><button class="button button4">Pyramid 13</a></button>
+	<a href="https://github.com/fulkkie24/CPSC331_621_php_pyramid-/blob/master/PHP/Fluke14.php"><button class="button button4">Pyramid 14</a></button>
+	<a href="https://github.com/fulkkie24/CPSC331_621_php_pyramid-/blob/master/PHP/Fluke15.php"><button class="button button4">Pyramid 15</a></button></br>
+	<a href="https://github.com/fulkkie24/CPSC331_621_php_pyramid-/blob/master/PHP/Fluke16.php"><button class="button button4">Pyramid 16</a></button>
+	<a href="https://github.com/fulkkie24/CPSC331_621_php_pyramid-/blob/master/PHP/Fluke17.php"><button class="button button4">Pyramid 17</a></button>
+	<a href="https://github.com/fulkkie24/CPSC331_621_php_pyramid-/blob/master/PHP/Fluke18.php"><button class="button button4">Pyramid 18</a></button>
+	<a href="https://github.com/fulkkie24/CPSC331_621_php_pyramid-/blob/master/PHP/Fluke19.php"><button class="button button4">Pyramid 19</a></button>
+	<a href="https://github.com/fulkkie24/CPSC331_621_php_pyramid-/blob/master/PHP/Fluke20.php"><button class="button button4">Pyramid 20</a></button></br>
+	<a href="https://github.com/fulkkie24/CPSC331_621_php_pyramid-/blob/master/PHP/Fluke21.php"><button class="button button4">Pyramid 21</a></button>
+	<a href="https://github.com/fulkkie24/CPSC331_621_php_pyramid-/blob/master/PHP/Fluke22.php"><button class="button button4">Pyramid 22</a></button>
+	<a href="https://github.com/fulkkie24/CPSC331_621_php_pyramid-/blob/master/PHP/Fluke23.php"><button class="button button4">Pyramid 23</a></button>
+	<a href="https://github.com/fulkkie24/CPSC331_621_php_pyramid-/blob/master/PHP/Fluke24.php"><button class="button button4">Pyramid 24</a></button>
+	<a href="https://github.com/fulkkie24/CPSC331_621_php_pyramid-/blob/master/PHP/Fluke25.php"><button class="button button4">Pyramid 25</a></button></br>
+	<a href="https://github.com/fulkkie24/CPSC331_621_php_pyramid-/blob/master/PHP/Fluke26.php"><button class="button button4">Pyramid 26</a></button>
+	<a href="https://github.com/fulkkie24/CPSC331_621_php_pyramid-/blob/master/PHP/Fluke27.php"><button class="button button4">Pyramid 27</a></button>
+	<a href="https://github.com/fulkkie24/CPSC331_621_php_pyramid-/blob/master/PHP/Fluke28.php"><button class="button button4">Pyramid 28</a></button>
+	<a href="https://github.com/fulkkie24/CPSC331_621_php_pyramid-/blob/master/PHP/Fluke29.php"><button class="button button4">Pyramid 29</a></button>
+	<a href="https://github.com/fulkkie24/CPSC331_621_php_pyramid-/blob/master/PHP/Fluke30.php"><button class="button button4">Pyramid 30</a></button></br>
+	<a href="https://github.com/fulkkie24/CPSC331_621_php_pyramid-/blob/master/PHP/Fluke31.php"><button class="button button4">Pyramid 31</a></button>
+	<a href="https://github.com/fulkkie24/CPSC331_621_php_pyramid-/blob/master/PHP/Fluke32.php"><button class="button button4">Pyramid 32</a></button>
+	<a href="https://github.com/fulkkie24/CPSC331_621_php_pyramid-/blob/master/PHP/Fluke33.php"><button class="button button4">Pyramid 33</a></button>
+	<a href="https://github.com/fulkkie24/CPSC331_621_php_pyramid-/blob/master/PHP/Fluke34.php"><button class="button button4">Pyramid 34</a></button>
+	<a href="https://github.com/fulkkie24/CPSC331_621_php_pyramid-/blob/master/PHP/Fluke35.php"><button class="button button4">Pyramid 35</a></button>
+	<a href="https://github.com/fulkkie24/CPSC331_621_php_pyramid-/blob/master/PHP/Fluke36.php"><button class="button button4">Pyramid 36</a></button>
+    
+  </div></center>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+
+
+  
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i href="https://github.com/fulkkie24/java_pyramid/blob/master/fluke22.java" class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i href="https://github.com/fulkkie24/java_pyramid/blob/master/fluke22.java" class="fa fa-instagram w3-hover-opacity"></i>
+  </div>
+  <p>ติดต่อได้ที่ <a href="https://www.facebook.com/Wachirasak.kung" target="_blank" class="w3-hover-text-green">FACEBOOK</a></p>
+</footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+</body>
+</html>
